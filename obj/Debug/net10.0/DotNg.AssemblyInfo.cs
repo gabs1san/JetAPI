@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DotNg")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc6a456e0e5c715e4477343e51ce837fee157b86")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c556574c10d73c4fc672472d71fb8810fd035d96")]
 [assembly: System.Reflection.AssemblyProductAttribute("DotNg")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DotNg")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
