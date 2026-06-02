@@ -42,8 +42,6 @@ JetAPI
 ├── Models
 ├── Data
 ├── Migrations
-├── Services
-├── Repositories
 └── Program.cs
 ```
 
@@ -76,15 +74,22 @@ git clone https://github.com/gabs1san/JetAPI.git
 cd JetAPI
 ```
 
-### 3. Configure a Connection String
+### 3. Observação sobre a Connection String
 
-No arquivo `appsettings.json`, configure sua conexão com o banco:
+Por se tratar de um projeto de estudos com foco na revisão de conceitos do Entity Framework Core, a Connection String foi configurada diretamente no `AppDbContext`.
 
-```json
-"ConnectionStrings": {
-  "DefaultConnection": "Server=SEU_SERVIDOR;Database=JetAPI;Trusted_Connection=True;"
+Em projetos de produção, o recomendado é armazenar a Connection String no arquivo `appsettings.json` e injetá-la através da configuração da aplicação, facilitando a manutenção, a segurança e a separação de responsabilidades.
+
+Exemplo:
+
+```csharp
+protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+{
+    optionsBuilder.UseSqlServer("SuaConnectionString");
 }
 ```
+
+Este formato foi adotado apenas para simplificar a configuração durante os estudos e testes iniciais.
 
 ### 4. Execute as Migrations
 
@@ -130,8 +135,27 @@ Este projeto foi desenvolvido para:
 
 ---
 
+## 📈 Próximos Passos
+
+Possíveis melhorias para versões futuras:
+
+* Implementar Repository Pattern
+* Adicionar camada de Services
+* Utilizar DTOs
+* Implementar autenticação com JWT
+* Configurar tratamento global de exceções
+* Mover a Connection String para o `appsettings.json`
+* Adicionar testes unitários
+
+---
+
 ## 👨‍💻 Autor
 
-Gabriel San Gregorio
+**Gabriel San Gregorio**
 
-⭐ Projeto desenvolvido para estudos e evolução na plataforma .NET.
+* GitHub: https://github.com/gabs1san
+* LinkedIn: https://www.linkedin.com/in/gabriel-san-gregorio
+
+---
+
+⭐ Projeto desenvolvido para estudos, prática de conceitos do Entity Framework Core e evolução no ecossistema .NET.
