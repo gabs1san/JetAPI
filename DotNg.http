@@ -1,0 +1,6 @@
+@DotNg_HostAddress = http://localhost:5193
+
+GET {{DotNg_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
