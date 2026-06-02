@@ -91,6 +91,13 @@ protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 
 Este formato foi adotado apenas para simplificar a configuração durante os estudos e testes iniciais.
 
+Exemplo em ambiente de produção: 
+No arquivo appsettings.json, configure sua conexão com o banco:
+
+"ConnectionStrings": {
+  "DefaultConnection": "Server=SEU_SERVIDOR;Database=JetAPI;Trusted_Connection=True;"
+}
+
 ### 4. Execute as Migrations
 
 ```bash
